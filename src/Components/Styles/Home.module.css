@@ -1,0 +1,91 @@
+.movieList{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    column-gap: 3rem;
+    row-gap: 4rem;
+}
+
+.movie{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.movie span{
+    font-weight: bold;
+    font-size: 120%;
+    padding: 0 5px;
+    text-align: center;
+}
+
+.movie a{
+    transition: .5s;
+}
+
+.movie a:hover{
+    transform: scale(1.05);
+}
+
+.movie img{
+    max-width: 180px;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.pagenationContainer{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.pagenationButton{
+    padding: .5rem;
+    border: none;
+    background-color: #5DADE2;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.pagenationButton:hover{
+    background-color: #85C1E9;
+}
+
+.pagenationButtonL{
+    border-radius: 1rem 0px 0 1rem;
+}
+
+.pagenationButtonR{
+    border-radius: 0 1rem 1rem 0;
+}
+
+.pagenation{
+    cursor: default;
+    font-weight: bold;
+    padding: .5rem 1rem;
+    background-color: #85C1E9;
+}
+
+.genreTitle{
+    margin-bottom: 2rem;
+    position: relative;
+    margin-left: 2rem;
+    font-size: 2rem;
+}
+
+.genreTitle::before{
+    content: '';
+    position: absolute;
+    background-color: #85C1E9;
+    width: 10px;
+    height: 10px;
+    left: -1rem;
+    top: .5rem;
+    transform: rotate(45deg);
+}
+
+@media (max-width: 600px){
+    .movieList{
+        column-gap: .5rem;
+    }
+}

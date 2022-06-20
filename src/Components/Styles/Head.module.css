@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@300;400;500&display=swap');
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #85C1E9;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    align-items: center;
+}   
+
+
+.title{
+    font-family: 'Spectral', serif;
+    position: relative;
+    line-height: .7;
+    font-size: 2.5rem;
+    z-index: 1;
+    color: #3d3d3d;
+}
+
+.title::before{
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: #85C1E9;
+    border-radius: 5px;
+}
+
+.titleMobile{
+    font-family: 'Spectral', serif;
+    position: relative;
+    line-height: .7;
+    font-size: 2.5rem;
+    z-index: 1;
+    color: #3d3d3d;
+    display: none;
+}
+
+.titleMobile::before{
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: #85C1E9;
+    border-radius: 5px;
+}
+
+.menu{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.menuItem{
+    color: #3d3d3d;
+    padding: 10px;
+    border-bottom: 1px solid transparent;
+    transition: .3s;
+}
+
+.menuItem:hover{
+    border-bottom: 1px solid #5DADE2;
+}
+
+
+ul a:global(.active){
+    color:#85C1E9;
+    font-weight: bolder;
+}
+
+@media (max-width: 600px){
+
+    .title{
+        display: none;
+    }
+
+    .titleMobile{
+        display: flex;
+    }
+}
